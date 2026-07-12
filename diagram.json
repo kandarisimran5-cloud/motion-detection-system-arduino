@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Simran Kandari",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -22.8,
+      "left": -63.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -34.45,
+      "left": 0,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -63.2, "left": 290.22, "attrs": {} }
+  ],
+  "connections": [
+    [ "led1:C", "uno:GND.2", "green", [ "v192", "h221.2" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "uno:13", "green", [ "v9.6", "h66" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v192", "h-172.8" ] ],
+    [ "pir1:GND", "uno:GND.3", "black", [ "v201.6", "h-173.06" ] ],
+    [ "pir1:OUT", "uno:2", "green", [ "v0", "h-67.34", "v-48", "h-28.8" ] ]
+  ],
+  "dependencies": {}
+}
